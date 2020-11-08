@@ -91,7 +91,7 @@ Sign in to Travis CI
 
 Once you have an account on GitHub, you can use this to sign in to Travis CI.
 
-Visit [Travis CI](https://travis-ci.org).
+Visit [Travis CI](https://travis-ci.com).
 
 Click on Sign in with GitHub.
 
@@ -100,7 +100,7 @@ Enable your repository on Travis CI
 
 Now, you need to tell Travis CI to check for changes in your repository, so click on your name on the top-right of the Travis CI page and select **Settings**.
 
-This will take you to a page, https://travis-ci.org/account/repositories, which shows a list of your GitHub repositories that Travis CI knows about.
+This will take you to a page, https://travis-ci.com/account/repositories, which shows a list of your GitHub repositories that Travis CI knows about.
 
 If you cannot see `saad-tariq/git-gitlab-travis-lab`, then click the **Sync account** button which tells Travis CI to check your current repositories on GitHub.
 
@@ -154,7 +154,8 @@ These changes are to our local repository only. Once we push them to GitHub, the
 $ git push origin master
 ```
 
-Visit https://travis-ci.org/saad-tariq/git-github-travis-lab.
+[![Build status](https://travis-ci.com/saad-tariq/git-github-travis-lab.svg?master "Build Status")](https://travis-ci.com/saad-tariq)
+
 
 You should shortly see a single job with two sub-jobs, one for each version of these languages we are testing under.
 
