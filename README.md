@@ -18,7 +18,7 @@ If you already have an account, then visit [GitHub](https://github.com) and sign
 Fork this repository on GitHub
 ------------------------------
 
-On the page for the instructor's repository, https://github.com/INSTRUCTOR/git-github-travis-lab, click Fork.
+On the page for the instructor's repository, https://github.com/mikej888/git-github-travis-lab, click Fork.
 
 If asked "Where should we fork this repository?", select your account.
 
@@ -28,7 +28,7 @@ Clone your fork locally
 Within a terminal window, clone your fork:
 
 ```
-$ git clone https://github.com/USERNAME/git-github-travis-lab
+$ git clone https://github.com/saad-tariq/git-github-travis-lab
 $ cd git-github-travis-lab
 $ ls
 ```
@@ -48,7 +48,7 @@ uryyb
 Look at the `.travis.yml` job file
 ----------------------------------
 
-Travis CI looks for a file called `.travis.yml` in a Git repository. This file tells Travis CI how to build and test your software. In addition, this file can be used to specify any dependencies you need installed before building or testing your software. 
+Travis CI looks for a file called `.travis.yml` in a Git repository. This file tells Travis CI how to build and test your software. In addition, this file can be used to specify any dependencies you need installed before building or testing your software.
 
 Look at the one in this repository:
 
@@ -60,7 +60,7 @@ $ cat .travis.yml
 language: python
 ```
 
-The `language` section tells Travis CI which build environment it should use. 
+The `language` section tells Travis CI which build environment it should use.
 
 ```
 python:
@@ -78,7 +78,7 @@ before_install:
 An optional `before_install` section lists the steps that need to be executed before we can build, run or test our code. For certain languages, we also need to download, build and install additional dependencies. Here, the Python [pytest-cov](https://pypi.python.org/pypi/pytest-cov) package is installed, using the Python `pip` package installer, so we can generate a code coverage report, a report on the lines of code executed by our tests.
 
 ```
-script: 
+script:
   - py.test -v --cov=msc
 ```
 
@@ -102,14 +102,14 @@ Now, you need to tell Travis CI to check for changes in your repository, so clic
 
 This will take you to a page, https://travis-ci.org/account/repositories, which shows a list of your GitHub repositories that Travis CI knows about.
 
-If you cannot see `USERNAME/git-gitlab-travis-lab`, then click the **Sync account** button which tells Travis CI to check your current repositories on GitHub.
+If you cannot see `saad-tariq/git-gitlab-travis-lab`, then click the **Sync account** button which tells Travis CI to check your current repositories on GitHub.
 
-When you can see `USERNAME/git-github-travis-lab`, then click on the button next to it to instruct Travis CI to monitor that repository for changes. The X icon should change to a check/tick icon.
+When you can see `saad-tariq/git-github-travis-lab`, then click on the button next to it to instruct Travis CI to monitor that repository for changes. The X icon should change to a check/tick icon.
 
 Write a test
 ------------
 
-In the directory `msc/tests`, create a test file called `test_USERNAME.py`.
+In the directory `msc/tests`, create a test file called `test_saad-tariq.py`.
 
 Add the following imports, to import the functions in `msc/rot13.py`, into your test file:
 
@@ -141,8 +141,8 @@ $ py.test
 When your test passes, add and commit it to your Git repository:
 
 ```
-$ git add msc/tests/test_USERNAME.py
-$ git commit -m "USERNAME's first test for ROT13" .
+$ git add msc/tests/test_saad-tariq.py
+$ git commit -m "saad-tariq's first test for ROT13" .
 ```
 
 Push to trigger a new build
@@ -154,7 +154,7 @@ These changes are to our local repository only. Once we push them to GitHub, the
 $ git push origin master
 ```
 
-Visit https://travis-ci.org/USERNAME/git-github-travis-lab.
+Visit https://travis-ci.org/saad-tariq/git-github-travis-lab.
 
 You should shortly see a single job with two sub-jobs, one for each version of these languages we are testing under.
 
@@ -169,15 +169,15 @@ Submit a pull request
 
 Now, submit your code for inclusion in the instructor's repository, the original repository that you forked. GitHub calls this a "pull request" - a request that the repository's owner pull in your changes.
 
-Visit https://github.com/USERNAME/git-github-travis-lab.
+Visit https://github.com/saad-tariq/git-github-travis-lab.
 
-Click Pull Requests 
+Click Pull Requests
 
 Click New Pull Request
 
-Set base fork: `INSTRUCTOR/git-github-travis-lab`
+Set base fork: `mikej888/git-github-travis-lab`
 
-Set head fork: `USERNAME/git-github-travis-lab`
+Set head fork: `saad-tariq/git-github-travis-lab`
 
 Click Create pull request
 
@@ -188,14 +188,14 @@ Click Create pull request
 Look at the Travis CI
 ---------------------
 
-The instructor will merge in your pull request. 
+The instructor will merge in your pull request.
 
-Once they have done so, you should see your tests being run as part of their Travis CI jobs at https://travis-ci.org/INSTRUCTOR/git-github-travis-lab.
+Once they have done so, you should see your tests being run as part of their Travis CI jobs at https://travis-ci.org/mikej888/git-github-travis-lab.
 
 Write another test
 ------------------
 
-Add another test to `msc/tests/test_USERNAME.py`.
+Add another test to `msc/tests/test_saad-tariq.py`.
 
 When it passes, commit your changes to this file.
 
@@ -203,15 +203,15 @@ Push your changes to GitHub.
 
 Create a pull request.
 
-Get updates from `INSTRUCTOR/git-github-travis-lab`
+Get updates from `mikej888/git-github-travis-lab`
 ---------------------------------------------------
 
-If you want to update your repository with the changes that have been made to `INSTRUCTOR/git-github-travis-lab` since you first forked it (i.e. tests commited and pushed by other students), you can pull these into your repository.
+If you want to update your repository with the changes that have been made to `mikej888/git-github-travis-lab` since you first forked it (i.e. tests commited and pushed by other students), you can pull these into your repository.
 
 Add the original repository that you forked as a `remote`. This is a short-hand, or nick-name, of the location of that repository:
 
 ```
-$ git remote add upstream https://github.com/INSTRUCTOR/git-github-travis-lab
+$ git remote add upstream https://github.com/mikej888/git-github-travis-lab
 ```
 
 Pull in the current version of the `master` branch of the repository represented by the `upstream` remote:
